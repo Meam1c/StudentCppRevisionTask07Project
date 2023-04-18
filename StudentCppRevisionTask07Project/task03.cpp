@@ -34,6 +34,16 @@
  */
 
 bool task03(int x, int y, int z, int a, int b, int c) {
-	
+	if (x < 1 || y < 1 || z < 1 || a < 1 || b < 1 || c < 1) {
+		return false;
+	}
+	int maxx = max(max(a, b), c);
+	int minx = min(min(a, b), c);
+	int maxy = max(max(x, y), z);
+	int miny = min(min(x, y), z);
+
+	if (maxy <= maxx && miny <= minx && (x + y + z - miny - maxy) <= (a + b + c - minx - maxx)) {
+		return true;
+	}
 	return false;
 }
