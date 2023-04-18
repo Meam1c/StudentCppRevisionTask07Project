@@ -22,5 +22,9 @@
  */
 
 string task02(int a, int b, int c) {	
-	return "a b c";
+	
+	int maxx = max(max(a, b), c);
+	int minx = min(min(a, b), c);
+	return to_string(minx) + " " + to_string(a + b + c - minx - maxx) + " " +to_string (maxx);
+
 }

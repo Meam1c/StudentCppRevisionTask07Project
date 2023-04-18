@@ -34,5 +34,6 @@
  */
 
 bool task03(int x, int y, int z, int a, int b, int c) {
+	
 	return false;
 }
